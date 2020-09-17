@@ -1,0 +1,5 @@
+開発中に遭遇したtips
+
+adのgetter定義していなかった
+buildingに渡しているadのメソッドを呼び間違えた。
+minitestインストールするの忘れてた
