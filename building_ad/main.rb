@@ -1,10 +1,8 @@
 require_relative 'models'
 
-def main
-  building = Building.new(name: "澤田南ビル")
-  company = Company.new(name: "SECOM")
-  company.make_ad("someImage")
-  puts company.request_ad_to(building)
+def company_post_ad_to_building(company_name, building_name, ad_image)
+  ad = Ad.new(owner: company_name, image: 'someimage')
+  company = Company.new(name: company_name)
+  building = Building.new(name: building_name)
+  company.request_ad(company, ad)
 end
-
-main
