@@ -1,3 +1,4 @@
+# 電車会社のモデルです。チケットの番号を保持しています
 class TrainCompany
   attr_accessor :ticket_id
   def initialize(ticket_id: 0)
@@ -8,7 +9,8 @@ class TrainCompany
     self.ticket_id += 1
   end
 end
-
+# 電車のモデルです。チケットを受け取り、乗車許可、降車許可を返します。
+# また、乗客リストを保持しています。
 class Train
   attr_reader :passengers
   def initialize(passengers: [])
@@ -29,7 +31,7 @@ class Train
     true
   end
 end
-
+# チケットのモデルです。電車会社に依存して初期化されます。
 class Ticket
   attr_reader :id, :train_company, :is_enabled
   def initialize(train_company:, is_enabled: true)
